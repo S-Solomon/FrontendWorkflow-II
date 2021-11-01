@@ -9,17 +9,9 @@
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/S-Solomon/FrontendWorkflow-II.git"
-  },
   "keywords": [],
   "author": "Samuel Solomon",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/S-Solomon/FrontendWorkflow-II/issues"
-  },
-  "homepage": "https://github.com/S-Solomon/FrontendWorkflow-II#readme",
   "devDependencies": {
     "webpack": "^5.61.0",
     "webpack-cli": "^4.9.1",
