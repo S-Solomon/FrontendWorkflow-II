@@ -8,8 +8,8 @@ const App = () => {
                 <section>
                     <h1>welcome to react</h1>
                 </section>
-            </main>
             <Recipes />
+            </main>
         </>
     )
 }

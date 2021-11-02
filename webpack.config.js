@@ -11,11 +11,28 @@ module.exports = {
     mode: mode,
     // target: target,
 
+    output: {
+        assetModuleFilename: "images/[hash][ext][query]",
+        clean: true, // We no longer need the clean web pack plugin in webpack 5
+    },
+
     module: {
         rules: [
             {
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                type: "asset",
+            },
+            {
                 test: /\.(s[ac]|c)ss$/i,
-                use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"]
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: { publicPath: "" },
+                    },
+                    "css-loader",
+                    "postcss-loader",
+                    "sass-loader",
+                ],
             },
             {
                 test: /\.jsx?$/,
@@ -24,7 +41,7 @@ module.exports = {
                     loader: "babel-loader",
                 },
             },
-        ]
+        ],
     },
 
     plugins: [new MiniCssExtractPlugin()],
@@ -37,5 +54,9 @@ module.exports = {
     devServer: {
         static: "./dist",
         hot: true,
-    }
-}
+    },
+};
+
+
+
+// How to set up an inline svg with webpack
