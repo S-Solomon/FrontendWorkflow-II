@@ -1,14 +1,4 @@
-import './styles/index.scss'
-const cities= ['paris', 'london', 'bangkok']
+import { render } from "react-dom";
+import App from './components/App'
 
-
-
-
-const elevenGauntletRecipe = {
-    ...cities, 
-    leather: 1,
-    refinedMoonstone: 4,
-}
-
-console.log(cities);
-console.log(elevenGauntletRecipe);
+render(<App />, document.getElementById("root"));
