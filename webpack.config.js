@@ -17,7 +17,8 @@ if (process.env.NODE_ENV === "production") {
     mode = "production";
     // Temporary workaround for 'browserslist' bug that is being patched in the near future
     // target = "browserslist";
-} else {
+} 
+if (process.env.SERVE){
     plugins.push(new ReactRefreshWebpackPlugin())
 }
 
@@ -35,6 +36,11 @@ module.exports = {
 
     module: {
         rules: [
+            {
+                test: /\.tsx?$/,
+                use: "ts-loader",
+                exclude: /node_modules/,
+            },
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
                 type: "asset",
@@ -64,7 +70,7 @@ module.exports = {
     plugins: plugins,
 
     resolve: {
-        extensions: [".js", ".jsx"],
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
     },
 
     devtool: "source-map",
