@@ -1,12 +1,39 @@
 # FrontendWorkflow-II
 
 
-## Webpack 5 Full Project Setup
+## Installation
+1. Clone the repo
+2. Run <code>npm i</code> to install dependencies
+3. Run one of the following commands, depending on intent:
+
+### Production Build
+<code> 
+  npm run build 
+</code>
+
+#### Development Build
+<code> 
+  npm run build-dev 
+</code>
+
+#### Development Build, watching for file changes
+<code> 
+  npm run watch 
+</code>
+
+#### Development Server on port:8080
+<code> 
+  npm start 
+</code>
+
+
+## Basic Support
 
 * Typescript support
+* Css
 * Sass Support
 * React Support
-
+* CSS Frameworks(Styled-components, emotion)
 
 ## Hosting
 
